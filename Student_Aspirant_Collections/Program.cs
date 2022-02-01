@@ -224,62 +224,48 @@ namespace Student_Aspirant_Collections
         {
             Console.WriteLine("This program for creating the list of the your students and aspirants informations !");
             Student myListOfStudents = new Student();
+            ArrayList studentList = new ArrayList();
             Aspirant myListOfAspirants = new Aspirant();
+            ArrayList aspirantList = new ArrayList();
             bool exit = false;
             for (; ; )
             {
                 if (exit) break;
                 Console.WriteLine("\nTo add student to the list, enter 1");
                 Console.WriteLine("To add aspirant to the list, enter 2");
-                Console.WriteLine("To display the count of students, enter 3");
-                Console.WriteLine("To display the count of aspirants, enter 4");
-                Console.WriteLine("To display the list all students, enter 5");
-                Console.WriteLine("To display the list all aspirants, enter 6");
-                Console.WriteLine("To display student by ordinal index, enter 7");
-                Console.WriteLine("To display aspirant by ordinal index, enter 8");
-                Console.WriteLine("To remove a student by ordinal index, enter 9");
-                Console.WriteLine("To remove a aspirant by ordinal index, enter 10");
+                Console.WriteLine("To display the list all students, enter 3");
+                Console.WriteLine("To display the list all aspirants, enter 4");
                 Console.WriteLine("To exit the program, enter 0");
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        ArrayList studentList = new ArrayList();
                         studentList.AddRange(myListOfStudents.Add());
+                        break;
+                    case "2":
+                        aspirantList.AddRange(myListOfAspirants.Add());
+                        break;
+                    case "3":
                         foreach (Student student in studentList)
                         {
                             Console.WriteLine(student.Surname);
                             Console.WriteLine(student.CourseOfStudy);
                             Console.WriteLine(student.GradeBookNumber);
                         }
-
-                        break;
-                    case "2":
-                        myListOfAspirants.Add();
-                        break;
-                    case "3":
-                        myListOfStudents.LentghOfData();
                         break;
                     case "4":
-                        myListOfAspirants.LentghOfData();
+                        foreach (Aspirant aspirant in aspirantList)
+                        {
+                            Console.WriteLine(aspirant.Surname);
+                            Console.WriteLine(aspirant.CourseOfStudy);
+                            Console.WriteLine(aspirant.GradeBookNumber);
+                            Console.WriteLine(aspirant.Subject);
+                        }
                         break;
                     case "5":
                         myListOfStudents.Print();
                         break;
                     case "6":
                         myListOfAspirants.Print();
-
-                        break;
-                    case "7":
-                        myListOfStudents.DisplayByOrdinalIndex(myListOfStudents.InputIndex());
-                        break;
-                    case "8":
-                        myListOfAspirants.DisplayByOrdinalIndex(myListOfAspirants.InputIndex());
-                        break;
-                    case "9":
-                        myListOfStudents.Delete();
-                        break;
-                    case "10":
-                        myListOfAspirants.Delete();
                         break;
                     case "0":
                         exit = true;
