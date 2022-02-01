@@ -1,0 +1,16 @@
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\bin\Debug\net5.0\Student_Aspirant_Collections.exe
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\bin\Debug\net5.0\Student_Aspirant_Collections.deps.json
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\bin\Debug\net5.0\Student_Aspirant_Collections.runtimeconfig.json
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\bin\Debug\net5.0\Student_Aspirant_Collections.runtimeconfig.dev.json
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\bin\Debug\net5.0\Student_Aspirant_Collections.dll
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\bin\Debug\net5.0\ref\Student_Aspirant_Collections.dll
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\bin\Debug\net5.0\Student_Aspirant_Collections.pdb
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.dll
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\ref\Student_Aspirant_Collections.dll
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.pdb
+C:\Users\Administrator\Desktop\Zaur\Day_15\Student_Aspirant_Collections\obj\Debug\net5.0\Student_Aspirant_Collections.genruntimeconfig.cache
