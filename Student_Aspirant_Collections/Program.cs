@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Student_Aspirant_Collections
 {
@@ -12,12 +13,9 @@ namespace Student_Aspirant_Collections
         }
         public int CourseOfStudy { get; set; }
         public int GradeBookNumber { get; set; }
-        public ArrayList list = new ArrayList();
         public abstract void Print();
-        public abstract ArrayList Add();
         public abstract void Lentgh();
-        public abstract ArrayList Sort();
-        public abstract void Delete();
+        public abstract void Add();
         public string Input()
         {
             for (; ; )
@@ -42,7 +40,7 @@ namespace Student_Aspirant_Collections
                     Console.WriteLine("Invalid input.Please try again!");
             }
         }
-        public static int InputDigits()
+        public int InputDigits()
         {
             int digits = 0;
             for (; ; )
@@ -55,7 +53,8 @@ namespace Student_Aspirant_Collections
     }
     class Student : Person
     {
-        public override ArrayList Add()
+        public ArrayList list = new ArrayList();
+        public override void Add()
         {
             Console.Write($"Enter surname: ");
             Surname = Input();
@@ -63,13 +62,12 @@ namespace Student_Aspirant_Collections
             CourseOfStudy = InputDigits();
             GradeBookNumber = Math.Abs(GetHashCode());
             list.Add($"Surname: {Surname} / Course of study: {CourseOfStudy} / Grade book number: {GradeBookNumber}");
-            return list;
         }
         public override void Lentgh()
         {
             Console.WriteLine(list.Count);
         }
-        public override ArrayList Sort()
+        public ArrayList Sort()
         {
             list.Sort();
             return list;
@@ -81,7 +79,7 @@ namespace Student_Aspirant_Collections
                 Console.WriteLine(student);
             }
         }
-        public override void Delete()
+        public void Delete()
         {
             byte index;
             for (; ; )
@@ -95,8 +93,9 @@ namespace Student_Aspirant_Collections
     }
     class Aspirant : Person
     {
+        LinkedList<string> list = new LinkedList<string>();
         public string Subject { get; set; }
-        public override ArrayList Add()
+        public override void Add()
         {
             Console.Write($"Enter surname: ");
             Surname = Input();
@@ -105,36 +104,18 @@ namespace Student_Aspirant_Collections
             GradeBookNumber = Math.Abs(GetHashCode());
             Console.Write($"Enter subject: ");
             Subject = Input();
-            list.Add($"Surname: {Surname} / Course of study: {CourseOfStudy} / Grade book number: {GradeBookNumber} / Subject: {Subject} ");
-            return list;
+            list.AddLast($"Surname: {Surname} / Course of study: {CourseOfStudy} / Grade book number: {GradeBookNumber} / Subject: {Subject} ");
         }
         public override void Lentgh()
         {
             Console.WriteLine(list.Count);
         }
-        public override ArrayList Sort()
-        {
-            list.Sort();
-            return list;
-        }
-
         public override void Print()
         {
-            foreach (object student in list)
+            foreach (object aspirant in list)
             {
-                Console.WriteLine(student);
+                Console.WriteLine(aspirant);
             }
-        }
-        public override void Delete()
-        {
-            byte index;
-            for (; ; )
-            {
-                Console.Write("Please enter index: ");
-                if (!byte.TryParse(Console.ReadLine(), out index) || index >= list.Count) { Console.WriteLine("Invalid input. There isn't this index !"); }
-                else break;
-            }
-            list.RemoveAt(index);
         }
     }
     class Program
@@ -154,10 +135,8 @@ namespace Student_Aspirant_Collections
                 Console.WriteLine("To display the count of aspirants, enter 4");
                 Console.WriteLine("To display the list all students, enter 5");
                 Console.WriteLine("To display the list all aspirants, enter 6");
-                Console.WriteLine("To sort student list enter 7");
-                Console.WriteLine("To sort aspirant list enter 8");
-                Console.WriteLine("To remove a student by ordinal index, enter 9");
-                Console.WriteLine("To remove a aspirant by ordinal index, enter 10");
+                Console.WriteLine("To sort student list, enter 7");
+                Console.WriteLine("To remove a student by ordinal index, enter 8");
                 Console.WriteLine("To exit the program, enter 0");
                 switch (Console.ReadLine())
                 {
@@ -183,13 +162,7 @@ namespace Student_Aspirant_Collections
                         myListOfStudents.Sort();
                         break;
                     case "8":
-                        myListOfAspirants.Sort();
-                        break;
-                    case "9":
                         myListOfStudents.Delete();
-                        break;
-                    case "10":
-                        myListOfAspirants.Delete();
                         break;
                     case "0":
                         exit = true;
